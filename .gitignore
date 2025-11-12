@@ -1,0 +1,75 @@
+# Environment files
+.env
+.env.*      # z.B. .env.local, .env.production
+vendor/
+
+# Docker / database data
+/data/
+**/data/
+data/
+data/mysql/
+*.sql
+*.sqlite
+*.sqlite3
+
+# Composer, npm, IDEs, OS
+/vendor/
+node_modules/
+.DS_Store
+Thumbs.db
+
+# IDEs / editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Logs, cache, temp
+*.log
+cache/
+tmp/
+*.cache
+
+# SSH / keys / certs
+*.pem
+*.key
+*.p12
+*.crt
+
+# Secrets / local files
+*.secret
+.htpasswd
+
+# Build artifacts
+dist/
+build/
+*.exe
+
+# Bilder
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.webp
+*.bmp
+*.tiff
+*.ico
+
+# Videos
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+*.flv
+*.wmv
+*.m4v
+
+# Optional: ganze Ordner ausschließen
+images/
+img/
+videos/
+media/
+assets/images/
+assets/videos/
