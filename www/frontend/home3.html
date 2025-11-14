@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARBOREAL – Holzschmuck Atelier</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        moss: {
+                            50: '#f3f6f3',
+                            100: '#e3ebe3',
+                            200: '#c7d7c7',
+                            300: '#9fb89f',
+                            400: '#6d8f6d',
+                            500: '#4a6e4a',
+                            600: '#3a5a3a',
+                            700: '#2e472e',
+                            800: '#253725',
+                            900: '#1a291a',
+                        },
+                        timber: {
+                            50: '#faf8f6',
+                            100: '#f2ece5',
+                            200: '#e5d9ca',
+                            300: '#d3bfa3',
+                            400: '#b8956d',
+                            500: '#9d7a4f',
+                            600: '#7d5f3d',
+                            700: '#5e4730',
+                            800: '#4a382a',
+                            900: '#342821',
+                        },
+                        ember: {
+                            50: '#fef6f2',
+                            100: '#fde9dd',
+                            200: '#fad0b9',
+                            300: '#f6ad8a',
+                            400: '#f18459',
+                            500: '#e86433',
+                            600: '#d14b23',
+                            700: '#a93b1d',
+                            800: '#87311d',
+                            900: '#6b2919',
+                        }
+                    },
+                    fontFamily: {
+                        display: ['Cormorant Garamond', 'serif'],
+                        body: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            background: #faf8f6;
+        }
+        
+        /* Organische Formen */
+        .blob-1 { border-radius: 64% 36% 47% 53% / 36% 58% 42% 64%; }
+        .blob-2 { border-radius: 47% 53% 70% 30% / 53% 36% 64% 47%; }
+        .blob-3 { border-radius: 30% 70% 53% 47% / 64% 47% 53% 36%; }
+        .blob-4 { border-radius: 71% 29% 42% 58% / 49% 68% 32% 51%; }
+        .blob-5 { border-radius: 39% 61% 68% 32% / 71% 38% 62% 29%; }
+        
+        /* Animationen */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-30px) rotate(5deg); }
+        }
+        
+        @keyframes morph {
+            0%, 100% { border-radius: 64% 36% 47% 53% / 36% 58% 42% 64%; }
+            25% { border-radius: 47% 53% 70% 30% / 53% 36% 64% 47%; }
+            50% { border-radius: 30% 70% 53% 47% / 64% 47% 53% 36%; }
+            75% { border-radius: 71% 29% 42% 58% / 49% 68% 32% 51%; }
+        }
+        
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        .animate-float-slow { animation: float 10s ease-in-out infinite; }
+        .animate-morph { animation: morph 15s ease-in-out infinite; }
+        
+        .animate-in { animation: slideInRight 0.8s ease-out forwards; }
+        .animate-in-left { animation: slideInLeft 0.8s ease-out forwards; }
+        .animate-fade-scale { animation: fadeInScale 1s ease-out forwards; }
+        
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
+        
+        /* Custom Hover Effects */
+        .hover-tilt {
+            transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        
+        .hover-tilt:hover {
+            transform: rotate(-3deg) scale(1.05);
+        }
+        
+        .hover-float {
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        
+        .hover-float:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Textur */
+        .wood-grain {
+            background-image: 
+                repeating-linear-gradient(
+                    90deg,
+                    transparent,
+                    transparent 3px,
+                    rgba(157, 122, 79, 0.02) 3px,
+                    rgba(157, 122, 79, 0.02) 6px
+                );
+        }
+        
+        /* Kreative Typografie */
+        .text-dramatic {
+            font-size: clamp(3rem, 12vw, 9rem);
+            line-height: 0.9;
+            font-weight: 700;
+            letter-spacing: -0.04em;
+        }
+        
+        /* Gradient Overlays */
+        .gradient-overlay {
+            background: linear-gradient(135deg, rgba(74, 110, 74, 0.9) 0%, rgba(157, 122, 79, 0.85) 100%);
+        }
+        
+        /* Scroll Progress Bar */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #4a6e4a, #e86433);
+            z-index: 9999;
+            transform-origin: left;
+        }
+    </style>
+</head>
+<body class="bg-timber-50 text-timber-900">
+    
+    <!-- Scroll Progress -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+    
+    <!-- Navigation - Minimalistisch & Floating -->
+    <nav class="top-8 left-1/2 z-50 fixed -translate-x-1/2 animate-fade-scale">
+        <div class="bg-white/80 shadow-2xl backdrop-blur-xl px-8 py-4 border border-timber-200/50 rounded-full">
+            <div class="flex items-center gap-12">
+                <div class="flex items-center gap-3">
+                    <div class="flex justify-center items-center bg-moss-600 w-8 h-8 blob-1">
+                        <div class="bg-ember-400 w-3 h-3 blob-2"></div>
+                    </div>
+                    <span class="font-display font-bold text-moss-900 text-xl tracking-tight">ARBOREAL</span>
+                </div>
+                
+                <div class="hidden lg:flex items-center gap-8 font-medium text-timber-700 text-sm">
+                    <a href="#werk" class="hover:text-moss-600 transition-colors">Das Werk</a>
+                    <a href="#holz" class="hover:text-moss-600 transition-colors">Hölzer</a>
+                    <a href="#kunst" class="hover:text-moss-600 transition-colors">Kunstwerke</a>
+                </div>
+                
+                <button class="bg-gradient-to-br from-moss-600 to-moss-700 hover:shadow-lg px-6 py-2 rounded-full font-medium text-white text-sm hover:scale-105 transition-all">
+                    Atelier
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero - Experimentelles Layout -->
+    <section class="relative flex items-center pt-32 pb-20 min-h-screen overflow-hidden">
+        <!-- Animierte Background Blobs -->
+        <div class="top-20 right-0 absolute bg-moss-400/20 w-[600px] h-[600px] animate-morph blob-1"></div>
+        <div class="bottom-40 -left-32 absolute bg-ember-400/15 w-[500px] h-[500px] animate-float blob-2"></div>
+        <div class="top-1/2 left-1/3 absolute bg-timber-300/20 w-[300px] h-[300px] animate-float-slow blob-3"></div>
+        
+        <div class="z-10 relative mx-auto px-6 lg:px-12 w-full max-w-[1600px]">
+            <div class="items-center gap-8 grid grid-cols-12">
+                
+                <!-- Links: Text - Dramatisch & Asymmetrisch -->
+                <div class="space-y-8 col-span-12 lg:col-span-7">
+                    <!-- Badge -->
+                    <div class="opacity-0 animate-in delay-100">
+                        <div class="inline-flex items-center gap-3 bg-moss-100 px-5 py-2 rounded-full">
+                            <div class="bg-ember-500 rounded-full w-2 h-2 animate-pulse"></div>
+                            <span class="font-semibold text-moss-800 text-xs uppercase tracking-wider">Handwerk trifft Natur</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Dramatische Headline -->
+                    <div class="opacity-0 animate-in delay-200">
+                        <h1 class="font-display text-dramatic text-moss-900 leading-none">
+                            Aus dem
+                            <span class="block text-ember-600 italic">Wald</span>
+                            <span class="block">an deine</span>
+                            <span class="block text-moss-700">Haut</span>
+                        </h1>
+                    </div>
+                    
+                    <!-- Subtext mit kreativem Layout -->
+                    <div class="opacity-0 max-w-xl animate-in delay-300">
+                        <p class="font-light text-timber-700 text-lg lg:text-xl leading-relaxed">
+                            Jedes Schmuckstück ist eine Hommage an die Natur. 
+                            <span class="font-medium text-moss-700">Handgefertigt</span> aus nachhaltigem Holz, 
+                            <span class="font-medium text-moss-700">einzigartig</span> in seiner Maserung, 
+                            <span class="font-medium text-ember-600">zeitlos</span> in seiner Schönheit.
+                        </p>
+                    </div>
+                    
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-wrap gap-4 opacity-0 animate-in delay-400">
+                        <button class="group bg-gradient-to-r from-moss-600 via-moss-700 to-moss-800 shadow-2xl hover:shadow-moss-600/50 px-8 py-4 rounded-full font-medium text-white hover:scale-105 transition-all">
+                            <span class="flex items-center gap-3">
+                                Kollektion erleben
+                                <svg class="w-5 h-5 transition-transform group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                                </svg>
+                            </span>
+                        </button>
+                        
+                        <button class="bg-white hover:bg-moss-50 px-8 py-4 border-2 border-moss-700 rounded-full font-medium text-moss-800 transition-all">
+                            Unsere Geschichte
+                        </button>
+                    </div>
+                    
+                    <!-- Stats - Kreativ verteilt -->
+                    <div class="flex gap-12 opacity-0 pt-8 animate-in delay-500">
+                        <div>
+                            <div class="font-display font-bold text-moss-700 text-4xl">100%</div>
+                            <div class="font-medium text-timber-600 text-sm">Handarbeit</div>
+                        </div>
+                        <div>
+                            <div class="font-display font-bold text-ember-600 text-4xl">12+</div>
+                            <div class="font-medium text-timber-600 text-sm">Holzarten</div>
+                        </div>
+                        <div>
+                            <div class="font-display font-bold text-moss-700 text-4xl">∞</div>
+                            <div class="font-medium text-timber-600 text-sm">Unikate</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Rechts: Visueller Bereich - Layered & Organic -->
+                <div class="relative col-span-12 lg:col-span-5">
+                    <div class="relative h-[600px] lg:h-[700px]">
+                        
+                        <!-- Hauptbild - Organische Form -->
+                        <div class="top-0 right-0 absolute opacity-0 w-[85%] h-[70%] animate-in delay-300">
+                            <div class="bg-gradient-to-br from-timber-300 via-timber-400 to-timber-500 shadow-2xl w-full h-full overflow-hidden blob-1">
+                                <div class="flex justify-center items-center w-full h-full font-display text-white/60 text-2xl">
+                                    [Hauptprodukt]
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Floating Element 1 -->
+                        <div class="bottom-20 left-0 absolute opacity-0 w-48 h-48 animate-float animate-in delay-400">
+                            <div class="bg-gradient-to-br from-moss-500 to-moss-700 shadow-xl w-full h-full overflow-hidden blob-3 hover-tilt">
+                                <div class="flex justify-center items-center w-full h-full font-medium text-white/80 text-sm">
+                                    [Detail 1]
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Floating Element 2 -->
+                        <div class="top-1/3 -left-10 absolute opacity-0 w-40 h-40 animate-float-slow animate-in delay-500">
+                            <div class="bg-gradient-to-br from-ember-400 to-ember-600 shadow-xl w-full h-full overflow-hidden blob-4 hover-tilt">
+                                <div class="flex justify-center items-center w-full h-full font-medium text-white/80 text-xs">
+                                    [Detail 2]
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Dekorative Elemente -->
+                        <div class="right-10 bottom-0 absolute border-4 border-timber-300/50 w-32 h-32 blob-2"></div>
+                        <div class="top-10 left-20 absolute bg-moss-200/30 w-24 h-24 blob-5"></div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Hölzer Section - Asymmetrisch & Kreativ -->
+    <section id="holz" class="relative py-32 overflow-hidden wood-grain">
+        <div class="mx-auto px-6 lg:px-12 max-w-[1600px]">
+            
+            <!-- Section Header - Kreativ platziert -->
+            <div class="mb-20 max-w-2xl">
+                <span class="inline-block bg-ember-100 mb-6 px-4 py-1.5 rounded-full font-bold text-ember-700 text-xs uppercase tracking-wider">
+                    Unsere Materialien
+                </span>
+                <h2 class="mb-6 font-display font-bold text-timber-900 text-6xl lg:text-7xl leading-tight">
+                    Hölzer mit
+                    <span class="block text-ember-600 italic">Charakter</span>
+                </h2>
+                <p class="text-timber-700 text-lg leading-relaxed">
+                    Wir arbeiten ausschließlich mit zertifiziert nachhaltigen Hölzern. Jede Holzart bringt ihre eigene Geschichte, Farbe und Persönlichkeit mit.
+                </p>
+            </div>
+
+            <!-- Experimental Grid Layout -->
+            <div class="gap-6 grid grid-cols-12">
+                
+                <!-- Holz 1 - Groß links oben -->
+                <div class="hover-float col-span-12 lg:col-span-8">
+                    <div class="relative bg-gradient-to-br from-timber-200 to-timber-300 shadow-2xl rounded-[40px] h-[500px] overflow-hidden">
+                        <div class="absolute inset-0 flex flex-col justify-between bg-gradient-to-br from-timber-600/90 to-timber-800/95 p-12">
+                            
+                            <!-- Holz-Textur Overlay -->
+                            <div class="top-0 right-0 absolute w-2/3 h-full">
+                                <div class="bg-timber-500/20 w-full h-full blob-1"></div>
+                            </div>
+                            
+                            <div class="z-10 relative">
+                                <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm mb-6 px-4 py-2 rounded-full">
+                                    <div class="bg-ember-400 rounded-full w-2 h-2"></div>
+                                    <span class="font-semibold text-white text-xs uppercase tracking-wider">Heimisch</span>
+                                </div>
+                                
+                                <h3 class="mb-4 font-display font-bold text-white text-5xl lg:text-6xl">Walnuss</h3>
+                                <p class="max-w-2xl text-white/90 text-lg leading-relaxed">
+                                    Tiefbraun mit eleganter Maserung. Das edelste heimische Holz – warm, beständig und voller Charakter.
+                                </p>
+                            </div>
+                            
+                            <div class="z-10 relative">
+                                <div class="flex flex-wrap gap-3 mb-6">
+                                    <span class="bg-white/10 backdrop-blur-sm px-4 py-1.5 rounded-full text-white text-sm">Dunkel</span>
+                                    <span class="bg-white/10 backdrop-blur-sm px-4 py-1.5 rounded-full text-white text-sm">Edel</span>
+                                    <span class="bg-white/10 backdrop-blur-sm px-4 py-1.5 rounded-full text-white text-sm">Nachhaltig</span>
+                                </div>
+                                <button class="bg-white hover:bg-timber-50 px-6 py-3 rounded-full font-medium text-timber-900 transition-all">
+                                    Mehr erfahren →
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Holz 2 - Klein rechts oben -->
+                <div class="hover-float col-span-12 lg:col-span-4">
+                    <div class="relative bg-gradient-to-br from-ember-300 to-ember-400 shadow-2xl rounded-[40px] h-[500px] overflow-hidden">
+                        <div class="absolute inset-0 flex flex-col justify-between bg-gradient-to-br from-ember-600/90 to-ember-700/90 p-8">
+                            <div>
+                                <div class="flex justify-center items-center bg-white/20 backdrop-blur-sm mb-6 w-16 h-16 blob-2">
+                                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="mb-3 font-display font-bold text-white text-3xl">Olivenholz</h3>
+                                <p class="text-white/90 text-sm leading-relaxed">
+                                    Mediterrane Eleganz mit goldener Maserung. Lebhaft und warm.
+                                </p>
+                            </div>
+                            <div class="flex gap-2">
+                                <span class="bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full text-white text-xs">Hell</span>
+                                <span class="bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full text-white text-xs">Lebendig</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Holz 3 - Mittel links unten -->
+                <div class="hover-float col-span-12 lg:col-span-5">
+                    <div class="relative bg-gradient-to-br from-moss-300 to-moss-400 shadow-2xl rounded-[40px] h-[400px] overflow-hidden">
+                        <div class="absolute inset-0 flex flex-col justify-between bg-gradient-to-br from-moss-600/90 to-moss-800/90 p-8">
+                            <div class="top-0 right-0 absolute bg-moss-400/30 w-40 h-40 blob-3"></div>
+                            
+                            <div class="z-10 relative">
+                                <div class="flex justify-center items-center bg-white/20 backdrop-blur-sm mb-4 w-14 h-14 blob-4">
+                                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="mb-3 font-display font-bold text-white text-4xl">Eiche</h3>
+                                <p class="text-white/90 leading-relaxed">
+                                    Kraftvoll und zeitlos. Symbol für Stärke und Beständigkeit.
+                                </p>
+                            </div>
+                            
+                            <div class="z-10 relative">
+                                <div class="flex gap-2">
+                                    <span class="bg-white/10 backdrop-blur-sm px-3 py-1.5 rounded-full text-white text-xs">Robust</span>
+                                    <span class="bg-white/10 backdrop-blur-sm px-3 py-1.5 rounded-full text-white text-xs">Klassisch</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Holz 4 - Mittel rechts unten versetzt -->
+                <div class="hover-float col-span-12 lg:col-span-7 lg:-mt-20">
+                    <div class="relative bg-gradient-to-br from-timber-400 to-timber-500 shadow-2xl rounded-[40px] h-[400px] overflow-hidden">
+                        <div class="absolute inset-0 flex items-center p-10 gradient-overlay">
+                            <div class="gap-8 grid grid-cols-2 w-full">
+                                <div>
+                                    <h3 class="mb-4 font-display font-bold text-white text-4xl">Kirsche</h3>
+                                    <p class="mb-6 text-white/90 leading-relaxed">
+                                        Rötlich-braune Wärme mit feiner Textur. Elegant und zeitlos schön.
+                                    </p>
+                                    <div class="flex gap-2">
+                                        <span class="bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full text-white text-xs">Rötlich</span>
+                                        <span class="bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full text-white text-xs">Fein</span>
+                                    </div>
+                                </div>
+                                <div class="flex justify-center items-center">
+                                    <div class="bg-white/10 backdrop-blur-sm w-48 h-48 blob-5"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        <!-- Floating Decorative Elements -->
+        <div class="top-20 right-20 absolute border-3 border-moss-300/30 w-32 h-32 animate-float-slow blob-1"></div>
+        <div class="bottom-40 left-10 absolute bg-ember-200/20 w-24 h-24 animate-float blob-3"></div>
+    </section>
+
+    <!-- Kunstwerke / Produkte - Ultra Kreatives Grid -->
+    <section id="kunst" class="relative bg-white py-32 overflow-hidden">
+        <div class="mx-auto px-6 lg:px-12 max-w-[1600px]">
+            
+            <!-- Header -->
+            <div class="mb-20 text-center">
+                <span class="inline-block bg-moss-100 mb-6 px-4 py-1.5 rounded-full font-bold text-moss-700 text-xs uppercase tracking-wider">
+                    Unsere Kollektion
+                </span>
+                <h2 class="mb-6 font-display font-bold text-timber-900 text-6xl lg:text-7xl">
+                    Hand<span class="text-moss-600">gefertigte</span>
+                    <span class="block text-ember-600 italic">Kunstwerke</span>
+                </h2>
+            </div>
+
+            <!-- Experimentelles Produkt-Grid -->
+            <div class="gap-6 grid grid-cols-12">
+                
+                <!-- Produkt 1 - Groß schräg -->
+                <div class="group col-span-12 lg:col-span-7">
+                    <div class="hover-float relative shadow-2xl rounded-[50px] overflow-hidden">
+                        <div class="relative bg-gradient-to-br from-timber-300 via-timber-400 to-timber-500 aspect-[4/3]">
+                            <div class="absolute inset-0 flex justify-center items-center font-display text-white/50 text-2xl">
+                                [Halskette Luna]
+                            </div>
+                            
+                            <!-- Gradient Overlay Bottom -->
+                            <div class="right-0 bottom-0 left-0 absolute bg-gradient-to-t from-timber-900/95 via-timber-900/80 to-transparent p-10">
+                                <div class="flex justify-between items-start">
+                                    <div>
+                                        <span class="inline-block bg-ember-500 mb-4 px-3 py-1 rounded-full font-bold text-white text-xs uppercase">Neu</span>
+                                        <h3 class="mb-2 font-display font-bold text-white text-4xl">Luna Crest</h3>
+                                        <p class="mb-4 text-white/80 text-sm">Walnuss · Handpoliert · 52cm</p>
+                                        <div class="flex items-center gap-4">
+                                            <span class="text-3xl font-display font-bol

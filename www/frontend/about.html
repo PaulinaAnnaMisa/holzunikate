@@ -8,7 +8,7 @@
   </head>
   <body class="bg-wood scroll-smooth">
     <!-- Navigation - Minimalistisch & Floating -->
-    <nav class="top-4 left-1/2 z-50 fixed -translate-x-1/2 animate-fade-scale">
+    <nav class="top-8 left-1/2 z-50 fixed -translate-x-1/2 animate-fade-scale">
       <div
         class="bg-white/80 shadow-2xl backdrop-blur-xl px-8 py-4 border border-teal-700/50 rounded-full"
       >
@@ -30,23 +30,22 @@
           <div
             class="hidden lg:flex items-center gap-8 font-medium text-timber-700 text-sm"
           >
-            <a href="#materials" class="hover:text-teal-700 transition-colors"
-              >Materialien</a
+            <a href="#holz" class="hover:text-teal-700 transition-colors"
+              >Home</a
             >
-            <a href="#about" class="hover:text-teal-700 transition-colors"
+            <a href="#holz" class="hover:text-teal-700 transition-colors"
               >Über mich</a
             >
-            <a href="#products" class="hover:text-teal-700 transition-colors"
+            <a href="#werk" class="hover:text-teal-700 transition-colors"
               >Unikate</a
             >
           </div>
 
-          <a
-            href="#contact"
+          <button
             class="bg-gradient-to-br from-teal-500 to-teal-700 hover:shadow-lg px-6 py-2 rounded-full font-medium text-white text-sm hover:scale-105 transition-all"
           >
             Kontakt
-          </a>
+          </button>
         </div>
       </div>
     </nav>
@@ -54,22 +53,14 @@
     <!-- Hero Section - Ungewöhnliches Layout -->
     <section
       id="home"
-      class="relative pt-12 pb-18 min-h-screen overflow-hidden grain-texture"
+      class="relative pt-16 pb-18 min-h-screen overflow-hidden grain-texture"
     >
-      <!-- Organische Background Shapes -->
-      <div
-        class="top-40 -right-32 z-10 absolute bg-amber-400/10 w-96 h-96 organic-shape-1 blob-animation"
-      ></div>
-      <div
-        class="bottom-20 -left-20 z-10 absolute bg-amber-400/10 w-80 h-80 organic-shape-2 blob-animation"
-        style="animation-delay: -4s"
-      ></div>
-      <div
-        class="top-1/3 left-1/4 z-10 absolute bg-teal-700/10 w-64 h-64 organic-shape-3 blob-animation"
-        style="animation-delay: -8s"
-      ></div>
+        <!-- Organische Background Shapes -->
+        <div class="top-40 -right-32 absolute bg-forest-500/20 w-96 h-96 organic-shape-1 blob-animation"></div>
+        <div class="bottom-20 -left-20 absolute bg-clay-400/15 w-80 h-80 organic-shape-2 blob-animation" style="animation-delay: -4s;"></div>
+        <div class="top-1/3 left-1/4 absolute bg-forest-300/10 w-64 h-64 organic-shape-3 blob-animation" style="animation-delay: -8s;"></div>
 
-      <div class="z-40 relative mx-auto px-6 lg:px-12 max-w-7xl">
+      <div class="z-10 relative mx-auto px-6 lg:px-12 max-w-7xl">
         <div class="items-center gap-8 grid grid-cols-12">
           <!-- Text Bereich - asymmetrisch platziert -->
           <div
@@ -104,12 +95,19 @@
               Unikate aus nachhaltigem Holz – von Hand gefertigt.
             </p>
             <div class="flex flex-wrap gap-4">
-              <a
-                href="#unikate"
-                class="group bg-gradient-to-br from-teal-500 via-teal-600 to-teal-700 shadow-lg hover:shadow-lg px-8 py-4 rounded-full font-medium text-white hover:scale-105 transition-all"
+              <button
+                class="group bg-gradient-to-br from-teal-500 via-teal-600 to-teal-700 shadow-xl hover:shadow-2xl px-8 py-4 rounded-full font-medium text-white hover:scale-105 transition-all"
               >
-                <span class="flex items-center gap-2"> Unikate endecken </span>
-              </a>
+                <span class="flex items-center gap-2">
+                  Unikate endecken
+
+                </span>
+              </button>
+              <button
+                class="hover:bg-teal-200 px-8 py-4 border-2 border-teal-700 rounded-full font-medium text-teal-950 transition-all"
+              >
+                Unsere Story
+              </button>
             </div>
           </div>
 
@@ -119,7 +117,7 @@
               class="lg:top-1/2 lg:right-0 lg:absolute relative lg:w-[140%] lg:-translate-y-1/2"
             >
               <!-- Hauptbild -->
-              <div class="z-20 relative ml-auto w-full lg:w-3/4">
+              <div class="z-40 relative ml-auto w-full lg:w-3/4">
                 <div
                   class="bg-gradient-to-br from-bark-200 via-bark-300 to-clay-200 shadow-2xl overflow-hidden organic-shape-1"
                 >
@@ -130,13 +128,14 @@
                   </div>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
       </div>
 
       <!-- Curve Divider -->
-      <div class="z-40 relative curve-divider">
+      <div class="z-20 relative curve-divider">
         <svg viewBox="0 0 1200 80" fill="none" preserveAspectRatio="none">
           <path
             d="M0,40 C300,80 500,0 800,40 C1000,60 1100,20 1200,40 L1200,80 L0,80 Z"
@@ -146,142 +145,8 @@
       </div>
     </section>
 
-    <!-- Materialien Section -->
-    <section id="materials" class="relative bg-white py-24 overflow-hidden">
-      <div class="mx-auto px-6 max-w-7xl">
-        <div class="mb-16 text-center">
-          <p class="mb-3 font-medium text-amber-500 text-sm tracking-wider">
-            UNSERE MATERIALIEN
-          </p>
-          <h2 class="mb-4 font-light text-teal-950 text-5xl">
-            Aus dem Herzen
-            <span class="font-semibold text-teal-700">der Natur.</span>
-          </h2>
-          <p class="mx-auto max-w-2xl text-teal-950"></p>
-          <p class="mx-auto max-w-2xl text-stone-600">
-            Von Olivenholz bis zu altem, wiederverwendetem Holz – wir setzen auf
-            Materialien mit einzigartiger Maserung und Charakter.
-          </p>
-        </div>
-
-        <div class="gap-8 grid md:grid-cols-3">
-          <!-- Material Card 1 -->
-          <div
-            class="group relative bg-gradient-to-br from-stone-50 to-stone-100 p-8 rounded-3xl overflow-hidden hover-lift"
-          >
-            <div
-              class="top-4 right-4 absolute bg-stone-700 opacity-10 w-32 h-32 organic-shape-1 blob-animation"
-            ></div>
-            <div class="z-10 relative">
-              <div
-                class="flex justify-center items-center bg-amber-600 mb-6 w-16 h-16 organic-shape-2 blob-animation"
-              >
-                <svg
-                  class="w-8 h-8 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
-                  ></path>
-                </svg>
-              </div>
-              <h3 class="mb-3 font-semibold text-stone-800 text-2xl">Leder</h3>
-              <p class="mb-4 text-stone-600">
-                Epoxidharz besticht durch seine Langlebigkeit und verleiht jedem
-                Stück eine einzigartige, zeitlose Note.
-              </p>
-              <span class="font-medium text-amber-800 text-sm"
-                >Klassch & Robust</span
-              >
-            </div>
-          </div>
-
-          <!-- Material Card 2 -->
-          <div
-            class="group relative bg-gradient-to-br from-amber-50 to-orange-50 mt-12 p-8 rounded-3xl overflow-hidden hover-lift"
-          >
-            <div
-              class="bottom-4 left-4 absolute bg-amber-400 opacity-10 w-40 h-40 organic-shape-1 blob-animation"
-            ></div>
-            <div class="z-10 relative">
-              <div
-                class="flex justify-center items-center bg-amber-800 mb-6 w-16 h-16 organic-shape-2 blob-animation"
-              >
-                <svg
-                  class="w-8 h-8 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
-                  ></path>
-                </svg>
-              </div>
-              <h3 class="mb-3 font-semibold text-stone-800 text-2xl">
-                Olivenholz
-              </h3>
-              <p class="mb-4 text-stone-600">
-                Mediterrane Lebendigkeit mit goldener Maserung und besonderer
-                Haptik.
-              </p>
-              <span class="font-medium text-amber-700 text-sm"
-                >Mediterran & Edel</span
-              >
-            </div>
-          </div>
-
-          <!-- Material Card 3 -->
-          <div
-            class="group relative bg-gradient-to-br from-teal-50 to-teal-50 p-8 rounded-3xl overflow-hidden hover-lift"
-          >
-            <div
-              class="top-4 left-4 absolute bg-teal-800 opacity-10 w-36 h-36 organic-shape-1 blob-animation"
-            ></div>
-            <div class="z-10 relative">
-              <div
-                class="flex justify-center items-center bg-teal-800 mb-6 w-16 h-16 organic-shape-2 blob-animation"
-              >
-                <svg
-                  class="w-8 h-8 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-                  ></path>
-                </svg>
-              </div>
-              <h3 class="mb-3 font-semibold text-stone-800 text-2xl">
-                Epoxidharz
-              </h3>
-              <p class="mb-4 text-stone-600">
-                Epoxidharz besticht durch seine Langlebigkeit und verleiht jedem
-                Stück eine einzigartige, zeitlose Note.
-              </p>
-              <span class="font-medium text-teal-700 text-sm"
-                >Einzigartig & Haltbar</span
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- About me -->
-    <section id="about" class="relative px-6 py-24">
+    <!-- Über uns -->
+    <section id="aboutus" class="relative mt-10 px-6 py-24">
       <div class="mx-auto max-w-7xl">
         <h2
           class="mb-16 font-bold text-5xl md:text-6xl text-center gradient-text"
@@ -289,7 +154,7 @@
           Über uns
         </h2>
         <div class="items-center gap-12 grid md:grid-cols-2">
-          <div class="space-y-6 text-teal-900 text-lg">
+          <div class="space-y-6 text-emerald-900 text-lg">
             <p class="leading-relaxed">
               Willkommen bei Naturholz Unikate – wo Handwerkskunst auf
               Naturliebe trifft. Als Kleinunternehmen lege ich großen Wert auf
@@ -307,10 +172,10 @@
           </div>
           <div class="relative">
             <div
-              class="relative flex justify-center items-center bg-gradient-to-br from-green-300 via-teal-500 to-teal-500 shadow-2xl rounded-3xl h-96 overflow-hidden hover:scale-105 transition-transform duration-500 transform"
+              class="relative flex justify-center items-center bg-gradient-to-br from-green-300 via-emerald-500 to-teal-500 shadow-2xl rounded-3xl h-96 overflow-hidden hover:scale-105 transition-transform duration-500 transform"
             >
               <div
-                class="absolute inset-0 flex justify-center items-start bg-gradient-to-t from-teal-900/20 to-transparent"
+                class="absolute inset-0 flex justify-center items-start bg-gradient-to-t from-emerald-900/20 to-transparent"
               >
                 <img src="./src/images/MEL_-430-b.jpg" alt="bild" class="" />
               </div>
@@ -319,7 +184,7 @@
               class="-right-6 -bottom-6 absolute bg-white shadow-xl p-6 rounded-2xl"
             >
               <p class="font-semibold text-green-700">100% Handarbeit</p>
-              <p class="text-teal-600 text-sm">Jedes Stück ein Unikat</p>
+              <p class="text-emerald-600 text-sm">Jedes Stück ein Unikat</p>
             </div>
           </div>
         </div>
@@ -328,8 +193,8 @@
 
     <!-- Produkte -->
     <section
-      id="products"
-      class="bg-gradient-to-br from-green-50 to-teal-50 px-6 py-24 leaf-pattern"
+      id="produkte"
+      class="bg-gradient-to-br from-green-50 to-emerald-50 px-6 py-24 leaf-pattern"
     >
       <div class="mx-auto max-w-7xl">
         <h2
@@ -337,7 +202,7 @@
         >
           Unsere Produkte
         </h2>
-        <p class="mb-16 text-teal-700 text-xl text-center">
+        <p class="mb-16 text-emerald-700 text-xl text-center">
           Einzigartige Schmuckstücke aus der Natur
         </p>
 
@@ -347,16 +212,18 @@
             class="group bg-white shadow-lg hover:shadow-2xl rounded-3xl overflow-hidden transition-all hover:-translate-y-2 duration-300 transform"
           >
             <div
-              class="relative flex justify-center items-center bg-gradient-to-br from-green-300 to-teal-400 h-64 overflow-hidden"
+              class="relative flex justify-center items-center bg-gradient-to-br from-green-300 to-emerald-400 h-64 overflow-hidden"
             >
               <img src="./src/images/MEL_-217.jpg" alt="" />
               <div
-                class="absolute inset-0 bg-teal-600/0 group-hover:bg-teal-600/10 transition-colors"
+                class="absolute inset-0 bg-emerald-600/0 group-hover:bg-emerald-600/10 transition-colors"
               ></div>
             </div>
             <div class="p-8">
-              <h3 class="mb-3 font-bold text-teal-800 text-2xl">Halsketten</h3>
-              <p class="text-teal-700">
+              <h3 class="mb-3 font-bold text-emerald-800 text-2xl">
+                Halsketten
+              </h3>
+              <p class="text-emerald-700">
                 Elegante Holzanhänger in verschiedenen Formen – von
                 minimalistisch bis kunstvoll. Jede Kette ein Einzelstück mit
                 einzigartiger Maserung.
@@ -377,8 +244,8 @@
               ></div>
             </div>
             <div class="p-8">
-              <h3 class="mb-3 font-bold text-teal-800 text-2xl">Ringe</h3>
-              <p class="text-teal-700">
+              <h3 class="mb-3 font-bold text-emerald-800 text-2xl">Ringe</h3>
+              <p class="text-emerald-700">
                 Leichte und angenehm zu tragende Holzohrringe. Perfekt für den
                 Alltag oder besondere Anlässe – zeitlos und natürlich schön.
               </p>
@@ -390,7 +257,7 @@
             class="group bg-white shadow-lg hover:shadow-2xl rounded-3xl overflow-hidden transition-all hover:-translate-y-2 duration-300 transform"
           >
             <div
-              class="relative flex justify-center items-center bg-gradient-to-br from-teal-300 to-teal-400 h-64 overflow-hidden"
+              class="relative flex justify-center items-center bg-gradient-to-br from-emerald-300 to-teal-400 h-64 overflow-hidden"
             >
               <img src="./src/images/MEL_-226.jpg" alt="" />
               <div
@@ -398,8 +265,8 @@
               ></div>
             </div>
             <div class="p-8">
-              <h3 class="mb-3 font-bold text-teal-800 text-2xl">Ohrringe</h3>
-              <p class="text-teal-700">
+              <h3 class="mb-3 font-bold text-emerald-800 text-2xl">Ohrringe</h3>
+              <p class="text-emerald-700">
                 Handgefertigte Armbänder aus edlen Holzperlen oder massiven
                 Holzelementen. Kombinierbar mit natürlichen Materialien.
               </p>
@@ -411,16 +278,18 @@
             class="group bg-white shadow-lg hover:shadow-2xl rounded-3xl overflow-hidden transition-all hover:-translate-y-2 duration-300 transform"
           >
             <div
-              class="relative flex justify-center items-center bg-gradient-to-br from-green-400 to-teal-500 h-64 overflow-hidden"
+              class="relative flex justify-center items-center bg-gradient-to-br from-green-400 to-emerald-500 h-64 overflow-hidden"
             >
               <img src="./src/images/MEL_-224.jpg" alt="" />
               <div
-                class="absolute inset-0 bg-teal-700/0 group-hover:bg-teal-700/10 transition-colors"
+                class="absolute inset-0 bg-emerald-700/0 group-hover:bg-emerald-700/10 transition-colors"
               ></div>
             </div>
             <div class="p-8">
-              <h3 class="mb-3 font-bold text-teal-800 text-2xl">Armbänder</h3>
-              <p class="text-teal-700">
+              <h3 class="mb-3 font-bold text-emerald-800 text-2xl">
+                Armbänder
+              </h3>
+              <p class="text-emerald-700">
                 Einzigartige Holzringe, optional mit Einlagen aus Harz oder
                 anderen natürlichen Materialien. Robust und wunderschön.
               </p>
@@ -440,10 +309,10 @@
               ></div>
             </div>
             <div class="p-8">
-              <h3 class="mb-3 font-bold text-teal-800 text-2xl">
+              <h3 class="mb-3 font-bold text-emerald-800 text-2xl">
                 Schmuckkästchen
               </h3>
-              <p class="text-teal-700">
+              <p class="text-emerald-700">
                 Kunstvolle Holzbroschen als Statement-Pieces. Perfekt für jedem
                 Outfit eine natürliche und individuelle Note.
               </p>
@@ -455,7 +324,7 @@
             class="group bg-white shadow-lg hover:shadow-2xl rounded-3xl overflow-hidden transition-all hover:-translate-y-2 duration-300 transform"
           >
             <div
-              class="relative flex justify-center items-center bg-gradient-to-br from-teal-400 to-teal-500 h-64 overflow-hidden"
+              class="relative flex justify-center items-center bg-gradient-to-br from-emerald-400 to-teal-500 h-64 overflow-hidden"
             >
               <img src="./src/images/MEL_-260.jpg" alt="" />
               <div
@@ -463,10 +332,10 @@
               ></div>
             </div>
             <div class="p-8">
-              <h3 class="mb-3 font-bold text-teal-800 text-2xl">
+              <h3 class="mb-3 font-bold text-emerald-800 text-2xl">
                 Stricknadeln
               </h3>
-              <p class="text-teal-700">
+              <p class="text-emerald-700">
                 Haben Sie eine besondere Idee? Gerne fertige ich personalisierte
                 Schmuckstücke nach Ihren Wünschen an.
               </p>
@@ -477,7 +346,7 @@
             class="group bg-white shadow-lg hover:shadow-2xl rounded-3xl overflow-hidden transition-all hover:-translate-y-2 duration-300 transform"
           >
             <div
-              class="relative flex justify-center items-center bg-gradient-to-br from-teal-400 to-teal-500 h-64 overflow-hidden"
+              class="relative flex justify-center items-center bg-gradient-to-br from-emerald-400 to-teal-500 h-64 overflow-hidden"
             >
               <img src="./src/images/MEL_-125.jpg" alt="" />
               <div
@@ -485,10 +354,10 @@
               ></div>
             </div>
             <div class="p-8">
-              <h3 class="mb-3 font-bold text-teal-800 text-2xl">
+              <h3 class="mb-3 font-bold text-emerald-800 text-2xl">
                 Schlüsselanhänger
               </h3>
-              <p class="text-teal-700">
+              <p class="text-emerald-700">
                 Haben Sie eine besondere Idee? Gerne fertige ich personalisierte
                 Schmuckstücke nach Ihren Wünschen an.
               </p>
@@ -499,7 +368,7 @@
             class="group bg-white shadow-lg hover:shadow-2xl rounded-3xl overflow-hidden transition-all hover:-translate-y-2 duration-300 transform"
           >
             <div
-              class="relative flex justify-center items-center bg-gradient-to-br from-teal-400 to-teal-500 h-64 overflow-hidden"
+              class="relative flex justify-center items-center bg-gradient-to-br from-emerald-400 to-teal-500 h-64 overflow-hidden"
             >
               <img src="./src/images/MEL_-16.jpg" alt="" />
               <div
@@ -507,8 +376,10 @@
               ></div>
             </div>
             <div class="p-8">
-              <h3 class="mb-3 font-bold text-teal-800 text-2xl">Haarbänder</h3>
-              <p class="text-teal-700">
+              <h3 class="mb-3 font-bold text-emerald-800 text-2xl">
+                Haarbänder
+              </h3>
+              <p class="text-emerald-700">
                 Haben Sie eine besondere Idee? Gerne fertige ich personalisierte
                 Schmuckstücke nach Ihren Wünschen an.
               </p>
@@ -519,7 +390,7 @@
             class="group bg-white shadow-lg hover:shadow-2xl rounded-3xl overflow-hidden transition-all hover:-translate-y-2 duration-300 transform"
           >
             <div
-              class="relative flex justify-center items-center bg-gradient-to-br from-teal-400 to-teal-500 h-64 overflow-hidden"
+              class="relative flex justify-center items-center bg-gradient-to-br from-emerald-400 to-teal-500 h-64 overflow-hidden"
             >
               <img src="./src/images/MEL_-224.jpg" alt="" />
               <div
@@ -527,10 +398,10 @@
               ></div>
             </div>
             <div class="p-8">
-              <h3 class="mb-3 font-bold text-teal-800 text-2xl">
+              <h3 class="mb-3 font-bold text-emerald-800 text-2xl">
                 Individuelles
               </h3>
-              <p class="text-teal-700">
+              <p class="text-emerald-700">
                 Haben Sie eine besondere Idee? Gerne fertige ich personalisierte
                 Schmuckstücke nach Ihren Wünschen an.
               </p>
@@ -549,7 +420,7 @@
           Unsere Philosophie
         </h2>
         <p
-          class="mx-auto mb-16 max-w-3xl text-teal-800 text-xl text-center leading-relaxed"
+          class="mx-auto mb-16 max-w-3xl text-emerald-800 text-xl text-center leading-relaxed"
         >
           Bei Naturholz Unikate steht die Verbindung zwischen Mensch und Natur
           im Mittelpunkt. Jedes Schmuckstück trägt die Geschichte des Baumes in
@@ -561,10 +432,10 @@
             class="bg-white shadow-xl p-10 rounded-3xl text-center hover:scale-105 transition-all duration-300 transform"
           >
             <div class="mb-6 text-7xl">♻️</div>
-            <h3 class="mb-4 font-bold text-teal-800 text-2xl">
+            <h3 class="mb-4 font-bold text-emerald-800 text-2xl">
               Nachhaltigkeit
             </h3>
-            <p class="text-teal-700 leading-relaxed">
+            <p class="text-emerald-700 leading-relaxed">
               Ausschließlich Holz aus nachhaltiger Forstwirtschaft oder
               Upcycling-Material. Ressourcenschonung ist uns wichtig.
             </p>
@@ -574,8 +445,8 @@
             class="bg-white shadow-xl p-10 rounded-3xl text-center hover:scale-105 transition-all duration-300 transform"
           >
             <div class="mb-6 text-7xl">✋</div>
-            <h3 class="mb-4 font-bold text-teal-800 text-2xl">Handarbeit</h3>
-            <p class="text-teal-700 leading-relaxed">
+            <h3 class="mb-4 font-bold text-emerald-800 text-2xl">Handarbeit</h3>
+            <p class="text-emerald-700 leading-relaxed">
               Jedes Stück wird von Hand gefertigt – ohne Massenproduktion. Das
               garantiert höchste Qualität und Einzigartigkeit.
             </p>
@@ -585,10 +456,10 @@
             class="bg-white shadow-xl p-10 rounded-3xl text-center hover:scale-105 transition-all duration-300 transform"
           >
             <div class="mb-6 text-7xl">🎨</div>
-            <h3 class="mb-4 font-bold text-teal-800 text-2xl">
+            <h3 class="mb-4 font-bold text-emerald-800 text-2xl">
               Individualität
             </h3>
-            <p class="text-teal-700 leading-relaxed">
+            <p class="text-emerald-700 leading-relaxed">
               Kein Schmuckstück gleicht dem anderen. Die natürliche Maserung
               macht jedes Produkt unverwechselbar.
             </p>
@@ -599,8 +470,8 @@
 
     <!-- Kontakt -->
     <section
-      id="contact"
-      class="bg-gradient-to-br from-green-50 via-teal-50 to-teal-50 px-6 py-24"
+      id="kontakt"
+      class="bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 px-6 py-24"
     >
       <div class="mx-auto max-w-6xl">
         <h2
@@ -618,8 +489,10 @@
               <div class="flex items-center gap-6">
                 <div class="text-5xl">📧</div>
                 <div>
-                  <h3 class="mb-2 font-bold text-teal-800 text-xl">E-Mail</h3>
-                  <p class="text-teal-700">info@naturholz-unikate.de</p>
+                  <h3 class="mb-2 font-bold text-emerald-800 text-xl">
+                    E-Mail
+                  </h3>
+                  <p class="text-emerald-700">info@naturholz-unikate.de</p>
                 </div>
               </div>
             </div>
@@ -630,8 +503,10 @@
               <div class="flex items-center gap-6">
                 <div class="text-5xl">📱</div>
                 <div>
-                  <h3 class="mb-2 font-bold text-teal-800 text-xl">Telefon</h3>
-                  <p class="text-teal-700">+49 (0) 123 456789</p>
+                  <h3 class="mb-2 font-bold text-emerald-800 text-xl">
+                    Telefon
+                  </h3>
+                  <p class="text-emerald-700">+49 (0) 123 456789</p>
                 </div>
               </div>
             </div>
@@ -642,10 +517,10 @@
               <div class="flex items-center gap-6">
                 <div class="text-5xl">🏡</div>
                 <div>
-                  <h3 class="mb-2 font-bold text-teal-800 text-xl">
+                  <h3 class="mb-2 font-bold text-emerald-800 text-xl">
                     Werkstatt
                   </h3>
-                  <p class="text-teal-700">
+                  <p class="text-emerald-700">
                     Nach Terminvereinbarung können Sie meine Werkstatt besuchen
                   </p>
                 </div>
@@ -658,10 +533,10 @@
               <div class="flex items-center gap-6">
                 <div class="text-5xl">⏰</div>
                 <div>
-                  <h3 class="mb-2 font-bold text-teal-800 text-xl">
+                  <h3 class="mb-2 font-bold text-emerald-800 text-xl">
                     Antwortzeit
                   </h3>
-                  <p class="text-teal-700">
+                  <p class="text-emerald-700">
                     Ich melde mich innerhalb von 24 Stunden bei Ihnen zurück
                   </p>
                 </div>
@@ -673,48 +548,48 @@
           <div class="bg-white shadow-2xl p-10 rounded-3xl">
             <form id="contact-form" class="space-y-6">
               <div>
-                <label class="block mb-2 font-semibold text-teal-800"
+                <label class="block mb-2 font-semibold text-emerald-800"
                   >Name</label
                 >
                 <input
                   type="text"
                   required
-                  class="px-4 py-3 border-2 border-teal-200 focus:border-teal-500 rounded-xl focus:outline-none w-full transition-colors"
+                  class="px-4 py-3 border-2 border-emerald-200 focus:border-emerald-500 rounded-xl focus:outline-none w-full transition-colors"
                 />
               </div>
               <div>
-                <label class="block mb-2 font-semibold text-teal-800"
+                <label class="block mb-2 font-semibold text-emerald-800"
                   >E-Mail</label
                 >
                 <input
                   type="email"
                   required
-                  class="px-4 py-3 border-2 border-teal-200 focus:border-teal-500 rounded-xl focus:outline-none w-full transition-colors"
+                  class="px-4 py-3 border-2 border-emerald-200 focus:border-emerald-500 rounded-xl focus:outline-none w-full transition-colors"
                 />
               </div>
               <div>
-                <label class="block mb-2 font-semibold text-teal-800"
+                <label class="block mb-2 font-semibold text-emerald-800"
                   >Betreff</label
                 >
                 <input
                   type="text"
                   required
-                  class="px-4 py-3 border-2 border-teal-200 focus:border-teal-500 rounded-xl focus:outline-none w-full transition-colors"
+                  class="px-4 py-3 border-2 border-emerald-200 focus:border-emerald-500 rounded-xl focus:outline-none w-full transition-colors"
                 />
               </div>
               <div>
-                <label class="block mb-2 font-semibold text-teal-800"
+                <label class="block mb-2 font-semibold text-emerald-800"
                   >Nachricht</label
                 >
                 <textarea
                   required
                   rows="5"
-                  class="px-4 py-3 border-2 border-teal-200 focus:border-teal-500 rounded-xl focus:outline-none w-full transition-colors resize-none"
+                  class="px-4 py-3 border-2 border-emerald-200 focus:border-emerald-500 rounded-xl focus:outline-none w-full transition-colors resize-none"
                 ></textarea>
               </div>
               <button
                 type="submit"
-                class="bg-gradient-to-r from-green-600 hover:from-green-700 to-teal-600 hover:to-teal-700 shadow-lg py-4 rounded-xl w-full font-semibold text-white hover:scale-105 transition-all transform"
+                class="bg-gradient-to-r from-green-600 hover:from-green-700 to-emerald-600 hover:to-emerald-700 shadow-lg py-4 rounded-xl w-full font-semibold text-white hover:scale-105 transition-all transform"
               >
                 Nachricht senden
               </button>
