@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Naturholz Unikate - Handgefertigter Holzschmuck</title>
+    <title>Galerie</title>
     <link href="./src/css/output.css" rel="stylesheet" />
   </head>
   <body class="bg-wood scroll-smooth">
@@ -14,7 +14,7 @@
       >
         <div class="flex items-center gap-12">
           <div class="items-center gap-3">
-            <a href="#home">
+            <a href="index.html#home">
               <img
                 src="./src/images/logo_holzunikate.svg"
                 alt="Logo Holzunikate"
@@ -30,13 +30,13 @@
           <div
             class="hidden lg:flex items-center gap-8 font-medium text-timber-700 text-sm"
           >
-            <a href="#materials" class="hover:text-teal-700 transition-colors"
+            <a href="index.html#materials" class="hover:text-teal-700 transition-colors"
               >Materialien</a
             >
-            <a href="#about" class="hover:text-teal-700 transition-colors"
+            <a href="index.html#about" class="hover:text-teal-700 transition-colors"
               >Über mich</a
             >
-            <a href="#products" class="hover:text-teal-700 transition-colors"
+            <a href="index.html#products" class="hover:text-teal-700 transition-colors"
               >Unikate</a
             >
           </div>
@@ -52,8 +52,8 @@
     </nav>
 
     <!-- Hero  -->
-    <section
-      id="home"
+    <header
+      id="headerGallery"
       class="relative pt-12 pb-18 min-h-screen overflow-hidden grain-texture"
     >
       <!-- Organische Background Shapes -->
@@ -75,42 +75,13 @@
           <div
             class="col-span-12 lg:col-span-5 lg:col-start-1 mt-20 stagger-in"
           >
-            <!-- Badge -->
-
-            <div
-              class="inline-flex items-center gap-3 bg-teal-700/20 mb-5 px-5 py-2 rounded-full"
-            >
-              <div
-                class="bg-amber-400 rounded-full w-2 h-2 animate-pulse"
-              ></div>
-              <span
-                class="font-semibold text-teal-700 text-xs uppercase tracking-wider"
-                >Handwerk trifft Natur</span
-              >
-            </div>
 
             <!-- Headline -->
             <h1
-              class="mb-6 font-bold text-teal-950 text-6xl lg:text-7xl xl:text-8xl leading-none"
+              class="text-center mb-6 font-bold text-teal-950 text-6xl lg:text-7xl xl:text-8xl leading-none"
             >
-              Holz.<br />
-              <span class="text-amber-500">Unikate.</span><br />
-              Melina.
+              Holz. <span class="text-amber-500">Unikate.</span><br />
             </h1>
-            <p
-              class="mb-8 max-w-md text-bark-700 text-lg lg:text-xl leading-relaxed"
-            >
-              Jedes Schmuckstück ist ein naturnahes, einzigartiges Unikat aus
-              nachhaltiger Handarbeit und Upcycling.
-            </p>
-            <div class="flex flex-wrap gap-4">
-              <a
-                href="#products"
-                class="group bg-gradient-to-br from-teal-500 via-teal-600 to-teal-700 shadow-lg hover:shadow-lg px-8 py-4 rounded-full font-medium text-white hover:scale-105 transition-all"
-              >
-                <span class="flex items-center gap-2"> Unikate endecken </span>
-              </a>
-            </div>
           </div>
 
           <!-- Bild Bereich - kreativ versetzt -->
@@ -119,16 +90,7 @@
               class="lg:top-1/2 lg:right-0 lg:absolute relative lg:w-[140%] lg:-translate-y-1/2"
             >
               <!-- Hauptbild -->
-              <div class="z-20 relative ml-auto w-full lg:w-3/4">
-                <div
-                  class="bg-gradient-to-br from-bark-200 via-bark-300 to-clay-200 shadow-2xl overflow-hidden organic-shape-1"
-                >
-                  <div
-                    class="flex justify-center items-center w-full h-full font-medium text-bark-500"
-                  >
-                    <img src="./src/images/MEL_0-227.jpg" alt="" />
-                  </div>
-                </div>
+
               </div>
             </div>
           </div>
@@ -144,7 +106,7 @@
           />
         </svg>
       </div>
-    </section>
+    </header>
 
     <!-- Materials -->
     <section id="materials" class="relative bg-white py-24 overflow-hidden">
@@ -363,11 +325,7 @@
             <div
               class="relative flex justify-center items-center h-64 overflow-hidden"
             >
-              <img
-                src="./src/images/MEL_-217.jpg"
-                alt=""
-                class="items-end zoomable cursor-pointer"
-              />
+              <img src="./src/images/MEL_-217.jpg" alt="" class="items-center zoomable" />
             </div>
             <div class="p-8">
               <h3 class="mb-3 font-bold text-teal-800 text-2xl">Halsketten</h3>
@@ -389,7 +347,7 @@
               <img
                 src="./src/images/MEL_0-215-b.jpg"
                 alt=""
-                class="items-center zoomable cursor-pointer"
+                class="items-center zoomable"
               />
             </div>
             <div class="p-8">
@@ -411,7 +369,7 @@
               <img
                 src="./src/images/MEL_-226.jpg"
                 alt=""
-                class="items-center zoomable cursor-pointer"
+                class="items-center zoomable"
               />
               <div class="absolute inset-0 transition-colors"></div>
             </div>
@@ -434,7 +392,7 @@
               <img
                 src="./src/images/MEL_0-62-b.jpg"
                 alt=""
-                class="items-center zoomable cursor-pointer"
+                class="items-center zoomable"
               />
               <div class="absolute inset-0 transition-colors"></div>
             </div>
@@ -457,7 +415,7 @@
               <img
                 src="./src/images/MEL_0-122.jpg"
                 alt=""
-                class="items-center zoomable cursor-pointer"
+                class="items-center zoomable"
               />
               <div class="absolute inset-0 transition-colors"></div>
             </div>
@@ -482,7 +440,7 @@
               <img
                 src="./src/images/MEL_-260.jpg"
                 alt=""
-                class="items-center zoomable cursor-pointer"
+                class="items-center zoomable"
               />
               <div class="absolute inset-0 transition-colors"></div>
             </div>
@@ -506,7 +464,7 @@
               <img
                 src="./src/images/MEL_-125-b.jpg"
                 alt=""
-                class="justify-end items-end zoomable cursor-pointer"
+                class="justify-end items-end zoomable"
               />
               <div class="absolute inset-0 transition-colors"></div>
             </div>
@@ -527,11 +485,7 @@
             <div
               class="relative flex justify-center items-center h-64 overflow-hidden"
             >
-              <img
-                src="./src/images/MEL_-16.jpg"
-                alt=""
-                class="items-center zoomable cursor-pointer"
-              />
+              <img src="./src/images/MEL_-16.jpg" alt="" class="items-center zoomable" />
               <div class="absolute inset-0 transition-colors"></div>
             </div>
             <div class="p-8">
@@ -549,12 +503,7 @@
             <div
               class="relative flex justify-center items-center h-64 overflow-hidden"
             >
-              <img
-                src="./src/images/MEL_-224.jpg"
-                alt=""
-                class="zoomable cursor-pointer"
-              />
-              <div class="absolute inset-0 transition-colors"></div>
+              <img src="./src/images/MEL_-224.jpg" alt="" class="zoomable"/>
             </div>
             <div class="p-8">
               <h3 class="mb-3 font-bold text-teal-800 text-2xl">
@@ -576,27 +525,8 @@
           </a>
         </div>
       </div>
-    </section>
-    <!-- Image Modal -->
-    <div
-      id="imageModal"
-      class="fixed inset-0 bg-black/50 hidden justify-center items-center p-24 z-40"
-    >
-      <div class="relative max-w-3xl w-full">
-        <button
-          id="closeModal"
-          class="absolute -top-4 -right-4 bg-white rounded-full p-2 shadow hover:bg-gray-200 transition"
-        >
-          ✕
-        </button>
-        <img
-          id="modalImage"
-          src=""
-          alt="Großansicht"
-          class="rounded-2xl shadow-lg"
-        />
-      </div>
     </div>
+    </section>
 
     <!-- Storytelling  -->
     <section class="relative bg-white py-24 overflow-hidden">
@@ -728,7 +658,7 @@
           </div>
         </div>
       </div>
-      <!-- Curve Divider -->
+     <!-- Curve Divider -->
       <div class="z-40 relative curve-divider">
         <svg viewBox="0 0 1200 80" fill="none" preserveAspectRatio="none">
           <path
@@ -742,7 +672,9 @@
     <!-- Kontakt -->
     <section id="contact" class="px-6 py-24 overflow-hidden grain-texture">
       <div class="mx-auto max-w-6xl">
-        <h2 class="mb-16 text-teal-950 text-4xl md:text-5xl text-center">
+        <h2
+          class="mb-16 text-teal-950 text-4xl md:text-5xl text-center"
+        >
           Kontakt
         </h2>
 
@@ -766,28 +698,26 @@
                 ></div>
               </div>
               <div class="flex items-center h-32 overflow-hidden">
-                <img src="./src/images/MEL_0-226.jpg" alt="" />
+                <img src="./src/images/MEL_0-226.jpg" alt="" >
               </div>
-              <div class="flex flex-col items-center">
-                <h3 class="mt-5 font-bold text-teal-800 text-xl">E-Mail</h3>
-                <p class="text-teal-700 text-center">
-                  info@naturholz-unikate.de
-                </p>
-              </div>
+                <div class="flex flex-col items-center">
+                  <h3 class="mt-5 font-bold text-teal-800 text-xl">E-Mail</h3>
+                  <p class="text-teal-700 text-center">info@naturholz-unikate.de</p>
+                </div>
 
-              <div class="flex flex-col items-center">
-                <h3 class="mt-5 font-bold text-teal-800 text-xl">Telefon</h3>
-                <p class="text-teal-700 text-center">+49 (0) 123 456789</p>
-              </div>
+                <div class="flex flex-col items-center">
+                  <h3 class="mt-5 font-bold text-teal-800 text-xl">Telefon</h3>
+                  <p class="text-teal-700 text-center">+49 (0) 123 456789</p>
+                </div>
 
-              <div class="flex flex-col items-center">
-                <h3 class="mt-5 font-bold text-teal-800 text-xl">
-                  Antwortzeit
-                </h3>
-                <p class="text-teal-700 text-center">
-                  Ich melde mich innerhalb von 24 Stunden bei Dir zurück.
-                  Schreibe mir auch gerne via WhatsApp oder rufe mich an.
-                </p>
+
+                <div class="flex flex-col items-center">
+                  <h3 class="mt-5 font-bold text-teal-800 text-xl">
+                    Antwortzeit
+                  </h3>
+                  <p class="text-teal-700 text-center">
+                    Ich melde mich innerhalb von 24 Stunden bei Dir zurück. Schreibe mir auch gerne via WhatsApp oder rufe mich an.
+                  </p>
               </div>
             </div>
           </div>
@@ -881,9 +811,8 @@
       </div>
 
       <div class="mt-10 text-white/60 text-sm text-center">
-        <p class="mb-10 text-center">
-          © <span id="year"></span> Holz. Unikate. Melina – Alle Rechte
-          vorbehalten.
+         <p class="mb-10 text-center">
+          © <span id="year"></span> Holz. Unikate. Melina – Alle Rechte vorbehalten.
         </p>
       </div>
     </footer>
@@ -891,7 +820,7 @@
     <!-- SCRIPTS -->
     <script src="./src/js/footer.js"></script>
     <script src="./src/js/smoothscroll.js"></script>
-    <script src="./src/js/imagemodal.js"></script>
     <script src="./src/js/contact.js"></script>
   </body>
 </html>
+
