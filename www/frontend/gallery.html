@@ -30,14 +30,23 @@
           <div
             class="hidden lg:flex items-center gap-8 font-medium text-timber-700 text-sm"
           >
-            <a href="index.html#materials" class="hover:text-teal-700 transition-colors"
+            <a
+              href="./index.html#materials"
+              class="hover:text-teal-700 transition-colors"
               >Materialien</a
             >
-            <a href="index.html#about" class="hover:text-teal-700 transition-colors"
+            <a
+              href="./index.html#about"
+              class="hover:text-teal-700 transition-colors"
               >Über mich</a
             >
-            <a href="index.html#products" class="hover:text-teal-700 transition-colors"
+            <a
+              href="./index.html#products"
+              class="hover:text-teal-700 transition-colors"
               >Unikate</a
+            >
+            <a href="gallery.html" class="hover:text-teal-700 transition-colors"
+              >Galerie</a
             >
           </div>
 
@@ -52,613 +61,555 @@
     </nav>
 
     <!-- Hero  -->
-    <header
-      id="headerGallery"
-      class="relative pt-12 pb-18 min-h-screen overflow-hidden grain-texture"
-    >
-      <!-- Organische Background Shapes -->
-      <div
-        class="top-40 -right-32 z-10 absolute bg-amber-400/10 w-96 h-96 organic-shape-1 blob-animation"
-      ></div>
-      <div
-        class="bottom-20 -left-20 z-10 absolute bg-amber-400/10 w-80 h-80 organic-shape-2 blob-animation"
-        style="animation-delay: -4s"
-      ></div>
-      <div
-        class="top-1/3 left-1/4 z-10 absolute bg-teal-700/10 w-64 h-64 organic-shape-3 blob-animation"
-        style="animation-delay: -8s"
-      ></div>
+    <header id="headerGallery" class="w-full relative overflow-hidden">
+      <!-- Background Slider: first image in-flow, others absolute overlays -->
+      <div id="bgSlider" class="w-full relative">
+        <!-- 1) First image: not absolute -> sets container height -->
+        <img
+          src="./src/images/gallery/MEL_0-215.jpg"
+          class="slide-img w-full h-auto object-contain object-bottom transition-opacity duration-700 opacity-100"
+          alt="Galerie 1"
+        />
+        <img
+          src="./src/images/gallery/MEL_0-68.jpg"
+          class="slide-img absolute inset-0 left-0 w-full h-auto object-contain object-bottom transition-opacity duration-700 opacity-0"
+          alt="Galerie 2"
+        />
 
-      <div class="z-40 relative mx-auto px-6 lg:px-12 max-w-7xl">
-        <div class="items-center gap-8 grid grid-cols-12">
-          <!-- Text Bereich - asymmetrisch platziert -->
-          <div
-            class="col-span-12 lg:col-span-5 lg:col-start-1 mt-20 stagger-in"
-          >
+        <img
+          src="./src/images/gallery/MEL_0-81.jpg"
+          class="slide-img absolute inset-0 left-0 w-full h-auto object-contain object-bottom transition-opacity duration-700 opacity-0"
+          alt="Galerie 3"
+        />
 
-            <!-- Headline -->
-            <h1
-              class="text-center mb-6 font-bold text-teal-950 text-6xl lg:text-7xl xl:text-8xl leading-none"
-            >
-              Holz. <span class="text-amber-500">Unikate.</span><br />
-            </h1>
-          </div>
+        <img
+          src="./src/images/gallery/MEL_0-98.jpg"
+          class="slide-img absolute inset-0 left-0 w-full h-auto object-contain object-bottom transition-opacity duration-700 opacity-0"
+          alt="Galerie 4"
+        />
 
-          <!-- Bild Bereich - kreativ versetzt -->
-          <div class="relative col-span-12 lg:col-span-7 delay-200 stagger-in">
-            <div
-              class="lg:top-1/2 lg:right-0 lg:absolute relative lg:w-[140%] lg:-translate-y-1/2"
-            >
-              <!-- Hauptbild -->
+        <img
+          src="./src/images/gallery/MEL_0-112.jpg"
+          class="slide-img absolute inset-0 left-0 w-full h-auto object-contain object-bottom transition-opacity duration-700 opacity-0"
+          alt="Galerie 5"
+        />
 
-              </div>
-            </div>
-          </div>
-        </div>
+        <img
+          src="./src/images/gallery/MEL_0-213.jpg"
+          class="slide-img absolute inset-0 left-0 w-full h-auto object-contain object-bottom transition-opacity duration-700 opacity-0"
+          alt="Galerie 6"
+        />
+
+        <img
+          src="./src/images/gallery/MEL_0-219.jpg"
+          class="slide-img absolute inset-0 left-0 w-full h-auto object-contain object-bottom transition-opacity duration-700 opacity-0"
+          alt="Galerie 7"
+        />
+
+        <img
+          src="./src/images/gallery/MEL_0-226.jpg"
+          class="slide-img absolute inset-0 left-0 w-full h-auto object-contain object-bottom transition-opacity duration-700 opacity-0"
+          alt="Galerie 8"
+        />
+
+        <img
+          src="./src/images/gallery/MEL_0-251.jpg"
+          class="slide-img absolute inset-0 left-0 w-full h-auto object-contain object-bottom transition-opacity duration-700 opacity-0"
+          alt="Galerie 9"
+        />
+
+        <img
+          src="./src/images/gallery/MEL_0-258.jpg"
+          class="slide-img absolute inset-0 left-0 w-full h-auto object-contain object-bottom transition-opacity duration-700 opacity-0"
+          alt="Galerie 10"
+        />
+
+        <img
+          src="./src/images/gallery/MEL_0-367.jpg"
+          class="slide-img absolute inset-0 left-0 w-full h-auto object-contain object-bottom transition-opacity duration-700 opacity-0"
+          alt="Galerie 11"
+        />
       </div>
 
-      <!-- Curve Divider -->
-      <div class="z-40 relative curve-divider">
-        <svg viewBox="0 0 1200 80" fill="none" preserveAspectRatio="none">
-          <path
-            d="M0,40 C300,80 500,0 800,40 C1000,60 1100,20 1200,40 L1200,80 L0,80 Z"
-            fill="#0f766e"
-          />
-        </svg>
-      </div>
+      <!-- Slider Buttons (overlay, unchanged) -->
+      <button
+        id="prevSlide"
+        class="absolute left-4 top-1/2 -translate-y-1/2 z-40 text-white text-4xl bg-black/30 hover:bg-black/50 p-3 rounded-full cursor-pointer"
+        aria-label="vorheriges Bild"
+      >
+        ❮
+      </button>
+
+      <button
+        id="nextSlide"
+        class="absolute right-4 top-1/2 -translate-y-1/2 z-40 text-white text-4xl bg-black/30 hover:bg-black/50 p-3 rounded-full cursor-pointer"
+        aria-label="nächstes Bild"
+      >
+        ❯
+      </button>
     </header>
 
-    <!-- Materials -->
-    <section id="materials" class="relative bg-white py-24 overflow-hidden">
+    <!-- Gallerie  -->
+    <section id="gallery-all" class="relative bg-white py-24 overflow-hidden">
+      <!-- Headline -->
       <div class="mx-auto px-6 max-w-7xl">
-        <div class="mb-16 text-center">
-          <p class="mb-3 font-medium text-amber-500 text-sm tracking-wider">
-            UNSERE MATERIALIEN
-          </p>
-          <h2 class="mb-4 font-light text-teal-950 text-5xl">
-            Aus dem Herzen
-            <span class="font-semibold text-teal-700">der Natur.</span>
-          </h2>
-          <p class="mx-auto max-w-2xl text-teal-950"></p>
-          <p class="mx-auto max-w-2xl text-stone-600">
-            Von Olivenholz bis zu altem, wiederverwendetem Holz – wir setzen auf
-            Materialien mit einzigartiger Maserung und Charakter.
-          </p>
-        </div>
-
-        <div class="gap-8 grid md:grid-cols-3">
-          <!-- Material Card 1 -->
-          <div
-            class="group relative bg-gradient-to-br from-stone-50 to-stone-100 p-8 rounded-3xl overflow-hidden hover-lift"
+        <h2 class="mb-6 font-light text-stone-800 text-4xl md:text-5xl">
+          <span class="font-semibold text-teal-700"
+            >Wo Holz Geschichten erzählt</span
           >
-            <div
-              class="top-4 right-4 absolute bg-stone-700 opacity-10 w-32 h-32 organic-shape-1 blob-animation"
-            ></div>
-            <div class="z-10 relative">
-              <div
-                class="flex justify-center items-center bg-amber-600 mb-6 w-16 h-16 organic-shape-2 blob-animation"
-              >
-                <svg
-                  class="w-8 h-8 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
-                  ></path>
-                </svg>
-              </div>
-              <h3 class="mb-3 font-semibold text-stone-800 text-2xl">Leder</h3>
-              <p class="mb-4 text-stone-600">
-                Epoxidharz besticht durch seine Langlebigkeit und verleiht jedem
-                Stück eine einzigartige, zeitlose Note.
-              </p>
-              <span class="font-medium text-amber-800 text-sm"
-                >Klassch & Robust</span
-              >
-            </div>
-          </div>
-
-          <!-- Material Card 2 -->
-          <div
-            class="group relative bg-gradient-to-br from-amber-50 to-orange-50 mt-12 p-8 rounded-3xl overflow-hidden hover-lift"
-          >
-            <div
-              class="bottom-4 left-4 absolute bg-amber-400 opacity-10 w-40 h-40 organic-shape-1 blob-animation"
-            ></div>
-            <div class="z-10 relative">
-              <div
-                class="flex justify-center items-center bg-amber-800 mb-6 w-16 h-16 organic-shape-2 blob-animation"
-              >
-                <svg
-                  class="w-8 h-8 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
-                  ></path>
-                </svg>
-              </div>
-              <h3 class="mb-3 font-semibold text-stone-800 text-2xl">
-                Olivenholz
-              </h3>
-              <p class="mb-4 text-stone-600">
-                Mediterrane Lebendigkeit mit goldener Maserung und besonderer
-                Haptik.
-              </p>
-              <span class="font-medium text-amber-700 text-sm"
-                >Mediterran & Edel</span
-              >
-            </div>
-          </div>
-
-          <!-- Material Card 3 -->
-          <div
-            class="group relative bg-gradient-to-br from-teal-50 to-teal-50 p-8 rounded-3xl overflow-hidden hover-lift"
-          >
-            <div
-              class="top-4 left-4 absolute bg-teal-800 opacity-10 w-36 h-36 organic-shape-1 blob-animation"
-            ></div>
-            <div class="z-10 relative">
-              <div
-                class="flex justify-center items-center bg-teal-800 mb-6 w-16 h-16 organic-shape-2 blob-animation"
-              >
-                <svg
-                  class="w-8 h-8 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-                  ></path>
-                </svg>
-              </div>
-              <h3 class="mb-3 font-semibold text-stone-800 text-2xl">
-                Epoxidharz
-              </h3>
-              <p class="mb-4 text-stone-600">
-                Epoxidharz besticht durch seine Langlebigkeit und verleiht jedem
-                Stück eine einzigartige, zeitlose Note.
-              </p>
-              <span class="font-medium text-teal-700 text-sm"
-                >Einzigartig & Haltbar</span
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- About me -->
-    <section id="about" class="relative px-6 py-24">
-      <div class="mx-auto max-w-7xl">
-        <p
-          class="mb-3 font-medium text-amber-500 text-sm text-center tracking-wider"
-        >
-          HERZEN & RAUTEN
-        </p>
-        <h2 class="mb-16 text-teal-950 text-4xl md:text-5xl text-center">
-          Über mich
+          <br />und Harz sie bewahrt
         </h2>
-        <div class="items-center gap-12 grid md:grid-cols-2">
-          <div class="space-y-6 text-teal-900 text-lg">
-            <p class="leading-relaxed">
-              Holz. Unikate. Melina. – wo Handwerkskunst auf Naturliebe trifft.
-              Als Kleinunternehmen lege ich großen Wert auf Qualität,
-              Nachhaltigkeit und Individualität.
-            </p>
-            <p class="leading-relaxed">
-              Die natürliche Maserung, Farbe und Struktur machen jedes Stück zu
-              einem wahren Unikat. Dabei verwende ich unter anderem Olivenholz
-              mit seiner einzigartigen, lebhaften Maserung, aber auch recyceltes
-              Holz, das ein zweites Leben erhält. Die Formen entstehen oft nach
-              Tageslaune: Manche Tage arbeite ich mehrere Tage an derselben
-              Form, an anderen experimentiere ich mit vielen unterschiedlichen
-              Größen und Varianten – ganz nach Gefühl und Inspiration. Meine
-              Lieblingsformen sind Rauten und Herzen.
-            </p>
-            <p class="leading-relaxed">
-              Mein Ansporn und mein Interesse an Holzarbeiten und Epoxidharz
-              liegen darin, mit den Händen zu arbeiten und aus den Ideen etwas
-              Großartiges entstehen zu lassen. Außerdem freue ich mich, andere
-              zu begeistern und für jeden einzigartigen Menschen sein perfektes
-              Unikat zu finden.
-            </p>
-          </div>
-
-          <div class="relative">
-            <div
-              class="relative flex justify-center items-center bg-gradient-to-br from-green-300 via-teal-500 to-teal-500 shadow-2xl rounded-3xl h-96 overflow-hidden hover:scale-105 transition-transform duration-500 transform"
-            >
-              <div
-                class="absolute inset-0 flex justify-center items-start bg-gradient-to-t from-teal-900/20 to-transparent"
-              >
-                <img src="./src/images/MEL_0-325-b.jpg" alt="bild" class="" />
-              </div>
-            </div>
-            <div class="relative bg-white shadow-xl mt-5 p-6 rounded-2xl">
-              <p class="font-semibold text-teal-700">100% Handarbeit</p>
-              <p class="text-teal-950">
-                „Angefangen hat es, als ich klein war. Die Begeisterung für die
-                Arbeit mit Holz war schon als Kind vorhanden, und mein Papa hat
-                sie gefördert.“
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Products -->
-    <section
-      id="products"
-      class="bg-gradient-to-br from-green-50 to-teal-50 px-6 py-24 leaf-pattern"
-    >
-      <div class="mx-auto max-w-7xl">
-        <p
-          class="mb-3 font-medium text-amber-500 text-sm text-center tracking-wider"
-        >
-          EINZIGARTIGE UNIKATE
+        <p class="mb-6 text-stone-600 leading-relaxed">
+          Schön, dass du da bist! In meiner Galerie findest du meine liebsten
+          Schmuckkreationen aus Holz und Epoxidharz – jedes Stück liebevoll
+          handgefertigt und wirklich einzigartig. Ich lade dich ein, zu stöbern,
+          zu entdecken und dich inspirieren zu lassen.
         </p>
-        <h2 class="mb-16 text-teal-950 text-5xl md:text-6xl text-center">
-          Einzigartige Schmuckstücke
-        </h2>
-
-        <div class="gap-8 grid md:grid-cols-2 lg:grid-cols-3">
-          <!-- Produkt 1 -->
-          <div
-            class="group bg-white shadow-lg hover:shadow-2xl rounded-3xl overflow-hidden transition-all hover:-translate-y-2 duration-300 transform"
-          >
-            <div
-              class="relative flex justify-center items-center h-64 overflow-hidden"
-            >
-              <img src="./src/images/MEL_-217.jpg" alt="" class="items-center zoomable" />
-            </div>
-            <div class="p-8">
-              <h3 class="mb-3 font-bold text-teal-800 text-2xl">Halsketten</h3>
-              <p class="text-teal-950">
-                Elegante Holzanhänger in verschiedenen Formen – von
-                minimalistisch bis kunstvoll. Jede Kette ein Einzelstück mit
-                einzigartiger Maserung.
-              </p>
-            </div>
-          </div>
-
-          <!-- Produkt 2 -->
-          <div
-            class="group bg-white shadow-lg hover:shadow-2xl rounded-3xl overflow-hidden transition-all hover:-translate-y-2 duration-300 transform"
-          >
-            <div
-              class="relative flex justify-center items-center h-64 overflow-hidden"
-            >
-              <img
-                src="./src/images/MEL_0-215-b.jpg"
-                alt=""
-                class="items-center zoomable"
-              />
-            </div>
-            <div class="p-8">
-              <h3 class="mb-3 font-bold text-teal-800 text-2xl">Ringe</h3>
-              <p class="text-teal-950">
-                Leichte und angenehm zu tragende Holzohrringe. Perfekt für den
-                Alltag oder besondere Anlässe – zeitlos und natürlich schön.
-              </p>
-            </div>
-          </div>
-
-          <!-- Produkt 3 -->
-          <div
-            class="group bg-white shadow-lg hover:shadow-2xl rounded-3xl overflow-hidden transition-all hover:-translate-y-2 duration-300 transform"
-          >
-            <div
-              class="relative flex justify-center items-center h-64 overflow-hidden"
-            >
-              <img
-                src="./src/images/MEL_-226.jpg"
-                alt=""
-                class="items-center zoomable"
-              />
-              <div class="absolute inset-0 transition-colors"></div>
-            </div>
-            <div class="p-8">
-              <h3 class="mb-3 font-bold text-teal-800 text-2xl">Ohrringe</h3>
-              <p class="text-teal-950">
-                Handgefertigte Armbänder aus edlen Holzperlen oder massiven
-                Holzelementen. Kombinierbar mit natürlichen Materialien.
-              </p>
-            </div>
-          </div>
-
-          <!-- Produkt 4 -->
-          <div
-            class="group bg-white shadow-lg hover:shadow-2xl rounded-3xl overflow-hidden transition-all hover:-translate-y-2 duration-300 transform"
-          >
-            <div
-              class="relative flex justify-center items-center h-64 overflow-hidden"
-            >
-              <img
-                src="./src/images/MEL_0-62-b.jpg"
-                alt=""
-                class="items-center zoomable"
-              />
-              <div class="absolute inset-0 transition-colors"></div>
-            </div>
-            <div class="p-8">
-              <h3 class="mb-3 font-bold text-teal-800 text-2xl">Armbänder</h3>
-              <p class="text-teal-950">
-                Einzigartige Holzringe, optional mit Einlagen aus Harz oder
-                anderen natürlichen Materialien. Robust und wunderschön.
-              </p>
-            </div>
-          </div>
-
-          <!-- Produkt 5 -->
-          <div
-            class="group bg-white shadow-lg hover:shadow-2xl rounded-3xl overflow-hidden transition-all hover:-translate-y-2 duration-300 transform"
-          >
-            <div
-              class="relative flex justify-center items-center h-64 overflow-hidden"
-            >
-              <img
-                src="./src/images/MEL_0-122.jpg"
-                alt=""
-                class="items-center zoomable"
-              />
-              <div class="absolute inset-0 transition-colors"></div>
-            </div>
-            <div class="p-8">
-              <h3 class="mb-3 font-bold text-teal-800 text-2xl">
-                Schmuckkästchen
-              </h3>
-              <p class="text-teal-950">
-                Kunstvolle Holzbroschen als Statement-Pieces. Perfekt für jedem
-                Outfit eine natürliche und individuelle Note.
-              </p>
-            </div>
-          </div>
-
-          <!-- Produkt 6 -->
-          <div
-            class="group bg-white shadow-lg hover:shadow-2xl rounded-3xl overflow-hidden transition-all hover:-translate-y-2 duration-300 transform"
-          >
-            <div
-              class="relative flex justify-center items-center h-64 overflow-hidden"
-            >
-              <img
-                src="./src/images/MEL_-260.jpg"
-                alt=""
-                class="items-center zoomable"
-              />
-              <div class="absolute inset-0 transition-colors"></div>
-            </div>
-            <div class="p-8">
-              <h3 class="mb-3 font-bold text-teal-800 text-2xl">
-                Stricknadeln
-              </h3>
-              <p class="text-teal-950">
-                Haben Sie eine besondere Idee? Gerne fertige ich personalisierte
-                Schmuckstücke nach Ihren Wünschen an.
-              </p>
-            </div>
-          </div>
-          <!-- Produkt 7 -->
-          <div
-            class="group bg-white shadow-lg hover:shadow-2xl rounded-3xl overflow-hidden transition-all hover:-translate-y-2 duration-300 transform"
-          >
-            <div
-              class="relative flex justify-center items-center h-64 overflow-hidden"
-            >
-              <img
-                src="./src/images/MEL_-125-b.jpg"
-                alt=""
-                class="justify-end items-end zoomable"
-              />
-              <div class="absolute inset-0 transition-colors"></div>
-            </div>
-            <div class="p-8">
-              <h3 class="mb-3 font-bold text-teal-800 text-2xl">
-                Schlüsselanhänger
-              </h3>
-              <p class="text-teal-950">
-                Haben Sie eine besondere Idee? Gerne fertige ich personalisierte
-                Schmuckstücke nach Ihren Wünschen an.
-              </p>
-            </div>
-          </div>
-          <!-- Produkt 8 -->
-          <div
-            class="group bg-white shadow-lg hover:shadow-2xl rounded-3xl overflow-hidden transition-all hover:-translate-y-2 duration-300 transform"
-          >
-            <div
-              class="relative flex justify-center items-center h-64 overflow-hidden"
-            >
-              <img src="./src/images/MEL_-16.jpg" alt="" class="items-center zoomable" />
-              <div class="absolute inset-0 transition-colors"></div>
-            </div>
-            <div class="p-8">
-              <h3 class="mb-3 font-bold text-teal-800 text-2xl">Haarbänder</h3>
-              <p class="text-teal-950">
-                Haben Sie eine besondere Idee? Gerne fertige ich personalisierte
-                Schmuckstücke nach Ihren Wünschen an.
-              </p>
-            </div>
-          </div>
-          <!-- Produkt 9 -->
-          <div
-            class="group bg-white shadow-lg hover:shadow-2xl rounded-3xl overflow-hidden transition-all hover:-translate-y-2 duration-300 transform"
-          >
-            <div
-              class="relative flex justify-center items-center h-64 overflow-hidden"
-            >
-              <img src="./src/images/MEL_-224.jpg" alt="" class="zoomable"/>
-            </div>
-            <div class="p-8">
-              <h3 class="mb-3 font-bold text-teal-800 text-2xl">
-                Individuelles
-              </h3>
-              <p class="text-teal-950">
-                Haben Sie eine besondere Idee? Gerne fertige ich personalisierte
-                Schmuckstücke nach Ihren Wünschen an.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="flex justify-center items-center mt-10">
+        <div class="flex flex-wrap gap-4">
           <a
-            href=""
-            class="bg-gradient-to-br from-teal-500 via-teal-600 to-teal-700 shadow-lg hover:shadow-lg px-8 py-4 rounded-full font-medium text-white hover:scale-105 transition-all"
+            href="#contact"
+            class="group bg-gradient-to-br from-teal-500 via-teal-600 to-teal-700 shadow-lg hover:shadow-lg px-8 py-4 rounded-full font-medium text-white hover:scale-105 transition-all"
           >
-            <span class="flex items-center gap-2"> Zur Galerie </span>
+            <span class="flex items-center gap-2"> Jetzt anfragen </span>
           </a>
         </div>
       </div>
-    </div>
-    </section>
 
-    <!-- Storytelling  -->
-    <section class="relative bg-white py-24 overflow-hidden">
-      <div
-        class="top-1/4 right-0 float-slow absolute opacity-5 w-96 h-96 organic-shape-1 blob-animation"
-      ></div>
+      <!-- Images  -->
+      <div id="images" class="px-6 py-16">
+        <div
+          id="images_container"
+          class="flex flex-wrap gap-6 justify-center items-start"
+        >
+          <img
+            src="./src/images/MEL_-16.jpg"
+            class="w-[300px] max-w-full h-auto rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_0-1.jpg"
+            class="w-[300px] max-w-full h-auto rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
 
-      <div class="mx-auto px-6 max-w-7xl">
-        <div class="items-center gap-16 grid md:grid-cols-2">
-          <div class="order-2 md:order-1">
-            <div class="relative">
-              <div
-                class="bg-gradient-to-br from-stone-200 to-amber-200 shadow-2xl rounded-3xl w-full h-1/2 overflow-hidden organic-blob-2"
-              >
-                <div
-                  class="flex justify-center items-center w-full h-full text-stone-400"
-                >
-                  <img src="./src/images/MEL_0-281.jpg" alt="" />
-                </div>
-              </div>
-              <div
-                class="-bottom-8 -left-8 float-animation absolute opacity-30 w-48 h-48 gradient-orange organic-blob"
-              ></div>
-            </div>
-          </div>
+          <img
+            src="./src/images/MEL_-445.jpg"
+            class="w-[300px] max-w-full h-auto rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_-125.jpg"
+            class="w-[300px] max-w-full h-auto rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_0-15.jpg"
+            class="w-[300px] max-w-full h-auto rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_-174.jpg"
+            class="w-[300px] max-w-full h-auto rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
 
-          <div class="order-1 md:order-2">
-            <p class="mb-3 font-medium text-amber-500 text-sm tracking-wider">
-              UNSER HANDWERK
-            </p>
-            <h2 class="mb-6 font-light text-stone-800 text-5xl">
-              Mit
-              <span class="font-semibold text-teal-700">Liebe</span>
-              zum<br />Detail gefertigt
-            </h2>
-            <p class="mb-6 text-stone-600 leading-relaxed">
-              In unserer Werkstatt entstehen aus sorgfältig ausgewählten Hölzern
-              einzigartige Schmuckstücke. Jedes Teil wird von Hand geschliffen,
-              geformt und veredelt – ein Prozess, der Zeit und Hingabe
-              erfordert.
-            </p>
-            <p class="mb-8 text-stone-600 leading-relaxed">
-              Die natürliche Maserung des Holzes macht jedes Stück zum Unikat.
-              Wir verwenden ausschließlich natürliche Öle und Wachse, um die
-              Schönheit des Materials zu bewahren und hervorzuheben.
-            </p>
+          <img
+            src="./src/images/MEL_-217.jpg"
+            class="w-[300px] max-w-full h-full rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_0-33.jpg"
+            class="w-[300px] max-w-full h-full rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
 
-            <div class="space-y-4">
-              <div class="flex items-center gap-4">
-                <div
-                  class="flex flex-shrink-0 justify-center items-center bg-teal-700 rounded-full w-12 h-12"
-                >
-                  <svg
-                    class="w-6 h-6 text-white"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M5 13l4 4L19 7"
-                    ></path>
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="font-semibold text-stone-800">100% Handarbeit</h3>
-                  <p class="text-stone-600 text-sm">
-                    Jedes Stück individuell gefertigt
-                  </p>
-                </div>
-              </div>
+          <img
+            src="./src/images/MEL_0-229.jpg"
+            class="w-[300px] h-full w-auto rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
 
-              <div class="flex items-center gap-4">
-                <div
-                  class="flex flex-shrink-0 justify-center items-center bg-amber-500 rounded-full w-12 h-12"
-                >
-                  <svg
-                    class="w-6 h-6 text-white"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M5 13l4 4L19 7"
-                    ></path>
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="font-semibold text-stone-800">
-                    Nachhaltige Materialien
-                  </h3>
-                  <p class="text-stone-600 text-sm">
-                    Zertifizierte Holzquellen
-                  </p>
-                </div>
-              </div>
+          <img
+            src="./src/images/MEL_-226.jpg"
+            class="w-[300px] max-w-full h-full rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
 
-              <div class="flex items-center gap-4">
-                <div
-                  class="flex flex-shrink-0 justify-center items-center bg-amber-800 rounded-full w-12 h-12"
-                >
-                  <svg
-                    class="w-6 h-6 text-white"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M5 13l4 4L19 7"
-                    ></path>
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="font-semibold text-stone-800">
-                    Natürliche Veredelung
-                  </h3>
-                  <p class="text-stone-600 text-sm">Ohne künstliche Zusätze</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <img
+            src="./src/images/MEL_0-33.jpg"
+            class="w-[300px] max-w-full h-full rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_-241.jpg"
+            class="w-[300px] max-w-full h-full rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_-238.jpg"
+            class="w-[300px] max-w-full h-full rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_0-252.jpg"
+            class="w-[300px] max-w-full h-auto rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_0-422.jpg"
+            class="w-[300px] max-w-full h-full rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_0-36.jpg"
+            class="w-[300px] max-w-full h-full rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_0-298.jpg"
+            class="w-[300px] max-w-full h-full rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_0-50.jpg"
+            class="w-[300px] max-w-full h-full rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_-261.jpg"
+            class="w-[300px] max-w-full h-full rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_0-57.jpg"
+            class="w-[300px] max-w-full h-full rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_-244.jpg"
+            class="w-[300px] max-w-full h-full rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_0-74.jpg"
+            class="w-[300px] max-w-full h-full rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_0-281.jpg"
+            class="w-[300px] max-w-full h-full rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_-238.jpg"
+            class="w-[300px] max-w-full h-full rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_0-93.jpg"
+            class="w-[300px] max-w-full h-full rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_-160.jpg"
+            class="w-[300px] max-w-full h-full rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_0-96.jpg"
+            class="w-[300px] max-w-full h-full rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_-531.jpg"
+            class="w-[300px] max-w-full h-full rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_0-422.jpg"
+            class="w-[300px] max-w-full h-full rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_0-111.jpg"
+            class="w-[300px] max-w-full h-full rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_0-104.jpg"
+            class="w-[300px] max-w-full h-full rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_0-255.jpg"
+            class="w-[300px] max-w-full h-auto rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_0-125.jpg"
+            class="w-[300px] max-w-full h-full rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_0-9.jpg"
+            class="w-[300px] max-w-full h-full rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_0-138.jpg"
+            class="w-[300px] max-w-full h-full rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_-449.jpg"
+            class="w-[300px] max-w-full h-full rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_0-157.jpg"
+            class="w-[300px] max-w-full h-full rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_-299.jpg"
+            class="w-[300px] max-w-full h-full rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_-210.jpg"
+            class="w-[300px] max-w-full h-full rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_0-21.jpg"
+            class="w-[300px] max-w-full h-full rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_0-164.jpg"
+            class="w-[300px] max-w-full h-full rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_-346.jpg"
+            class="w-[300px] max-w-full h-full rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_0-422.jpg"
+            class="w-[300px] max-w-full h-auto rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_0-170.jpg"
+            class="w-[300px] max-w-full h-full rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_0-62.jpg"
+            class="w-[300px] max-w-full h-full rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_0-176.jpg"
+            class="w-[300px] max-w-full h-full rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_-225.jpg"
+            class="w-[300px] max-w-full h-full rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_0-187.jpg"
+            class="w-[300px] max-w-full h-full rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_-364.jpg"
+            class="w-[300px] max-w-full h-full rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_0-205.jpg"
+            class="w-[300px] max-w-full h-full rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_0-212.jpg"
+            class="w-[300px] max-w-full h-full rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_-430.jpg"
+            class="w-[300px] max-w-full h-full rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_0-216.jpg"
+            class="w-[300px] max-w-full h-full rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_0-238.jpg"
+            class="w-[300px] max-w-full h-auto rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_0-215.jpg"
+            class="w-[300px] max-w-full h-auto rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+
+          <img
+            src="./src/images/MEL_-379.jpg"
+            class="w-[300px] max-w-full h-auto rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_0-218.jpg"
+            class="w-[300px] max-w-full h-auto rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_-226.jpg"
+            class="w-[300px] max-w-full h-auto rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_0-221.jpg"
+            class="w-[300px] max-w-full h-auto rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_-449.jpg"
+            class="w-[300px] max-w-full h-auto rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_0-230.jpg"
+            class="w-[300px] max-w-full h-auto rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_0-257.jpg"
+            class="w-[300px] max-w-full h-auto rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_0-261.jpg"
+            class="w-[300px] max-w-full h-auto rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_0-274.jpg"
+            class="w-[300px] max-w-full h-auto rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_0-283.jpg"
+            class="w-[300px] max-w-full h-auto rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_0-311.jpg"
+            class="w-[300px] max-w-full h-auto rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_0-371.jpg"
+            class="w-[300px] max-w-full h-auto rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_0-217.jpg"
+            class="w-[300px] max-w-full h-auto rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_0-437.jpg"
+            class="w-[300px] max-w-full h-auto rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
+          <img
+            src="./src/images/MEL_-541.jpg"
+            class="w-[300px] max-w-full h-auto rounded-xl object-cover flex-shrink-0"
+            alt=""
+            loading="lazy"
+          />
         </div>
       </div>
-     <!-- Curve Divider -->
+      <!-- Curve Divider -->
       <div class="z-40 relative curve-divider">
         <svg viewBox="0 0 1200 80" fill="none" preserveAspectRatio="none">
           <path
@@ -672,9 +623,7 @@
     <!-- Kontakt -->
     <section id="contact" class="px-6 py-24 overflow-hidden grain-texture">
       <div class="mx-auto max-w-6xl">
-        <h2
-          class="mb-16 text-teal-950 text-4xl md:text-5xl text-center"
-        >
+        <h2 class="mb-16 text-teal-950 text-4xl md:text-5xl text-center">
           Kontakt
         </h2>
 
@@ -698,26 +647,28 @@
                 ></div>
               </div>
               <div class="flex items-center h-32 overflow-hidden">
-                <img src="./src/images/MEL_0-226.jpg" alt="" >
+                <img src="./src/images/MEL_0-226.jpg" alt="" />
               </div>
-                <div class="flex flex-col items-center">
-                  <h3 class="mt-5 font-bold text-teal-800 text-xl">E-Mail</h3>
-                  <p class="text-teal-700 text-center">info@naturholz-unikate.de</p>
-                </div>
+              <div class="flex flex-col items-center">
+                <h3 class="mt-5 font-bold text-teal-800 text-xl">E-Mail</h3>
+                <p class="text-teal-700 text-center">
+                  info@naturholz-unikate.de
+                </p>
+              </div>
 
-                <div class="flex flex-col items-center">
-                  <h3 class="mt-5 font-bold text-teal-800 text-xl">Telefon</h3>
-                  <p class="text-teal-700 text-center">+49 (0) 123 456789</p>
-                </div>
+              <div class="flex flex-col items-center">
+                <h3 class="mt-5 font-bold text-teal-800 text-xl">Telefon</h3>
+                <p class="text-teal-700 text-center">+49 (0) 123 456789</p>
+              </div>
 
-
-                <div class="flex flex-col items-center">
-                  <h3 class="mt-5 font-bold text-teal-800 text-xl">
-                    Antwortzeit
-                  </h3>
-                  <p class="text-teal-700 text-center">
-                    Ich melde mich innerhalb von 24 Stunden bei Dir zurück. Schreibe mir auch gerne via WhatsApp oder rufe mich an.
-                  </p>
+              <div class="flex flex-col items-center">
+                <h3 class="mt-5 font-bold text-teal-800 text-xl">
+                  Antwortzeit
+                </h3>
+                <p class="text-teal-700 text-center">
+                  Ich melde mich innerhalb von 24 Stunden bei Dir zurück.
+                  Schreibe mir auch gerne via WhatsApp oder rufe mich an.
+                </p>
               </div>
             </div>
           </div>
@@ -811,8 +762,9 @@
       </div>
 
       <div class="mt-10 text-white/60 text-sm text-center">
-         <p class="mb-10 text-center">
-          © <span id="year"></span> Holz. Unikate. Melina – Alle Rechte vorbehalten.
+        <p class="mb-10 text-center">
+          © <span id="year"></span> Holz. Unikate. Melina – Alle Rechte
+          vorbehalten.
         </p>
       </div>
     </footer>
@@ -820,7 +772,7 @@
     <!-- SCRIPTS -->
     <script src="./src/js/footer.js"></script>
     <script src="./src/js/smoothscroll.js"></script>
+    <script src="./src/js/gallery.js"></script>
     <script src="./src/js/contact.js"></script>
   </body>
 </html>
-
